@@ -21,3 +21,20 @@ B=[0 0;
     1/La 0];
 
 C=eye(3);
+
+% Look at open loop eigen values of system
+open_loop_poles=eig(A);
+
+%% Design a full state feedback controller
+%Verify that system is controllabele
+
+pc=ctrb(A,B(:,1));
+rank(pc);
+
+%chose desired closed loop pole location
+desired_closed_loop_poles=[-100;-110;-120];
+
+%Compute full state feedback gain
+K=place(A,B(:,1),desired_closed_loop_poles);
+
+
