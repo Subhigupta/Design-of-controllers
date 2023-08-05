@@ -32,7 +32,8 @@ pc=ctrb(A,B(:,1));
 rank(pc);
 
 %chose desired closed loop pole location
-desired_closed_loop_poles=[-100;-110;-120];
+desired_closed_loop_poles=[-100;-110;-120]; %these gave a aggressive controller
+desired_closed_loop_poles=[-5;-30;-400];
 
 %Compute full state feedback gain
 K=place(A,B(:,1),desired_closed_loop_poles);
