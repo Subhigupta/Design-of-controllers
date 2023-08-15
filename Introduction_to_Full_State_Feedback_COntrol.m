@@ -17,7 +17,7 @@ p_desired=[-5+2*i, -5-2*i];
 
 [K_Ackr]=acker(A,B,p_desired); % not reliable for larger order system
 
-%ccheck that the closed loop simulations are int the desired loacation
+%check that the closed loop simulations are in the desired loacation
 A_cl=A-B*K;
 eig(A_cl);
 
@@ -37,8 +37,5 @@ K_whiteboard=[ 1/10 1/10;
     -1033/241 4471/240];
 
 eig(A-B*K); 
-    
-
-
 
 

@@ -70,8 +70,11 @@ rank(ctrb(A,B_controllable))% checking it with controllability test
 %Check the rank-nullity theorem
 rank([A-lambda1*eye(3) v1])%Rank and null space space respectively 
 %combined should have a full rank
+Pc=ctrb(A,v1);
+rank(Pc) %the system is not controllable if eigen vector is used.
 rank([A-lambda2*eye(3) v2])
 rank([A-lambda3*eye(3) v3])
+rank([A-lambda1*eye(3) v2]) % the rank is lost by other eigen vector not relatted to eigen value 1.
 
 %Plot eigen vector
 quiver3(0,0,0,v1(1),v1(2),v1(3), 'b', 'LineWidth', 4)%uncontrollable as it lies in yellow and green plane
