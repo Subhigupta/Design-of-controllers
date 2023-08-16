@@ -1,10 +1,5 @@
 %Illustrate various spaces needed for the PBH test.
-%This code plots the vector spaces  that span the range of A-lambda_i*I
-%(usesorth command)
-%Also demonstrates that what choice of B will give a controllable or
-%uncontrollable system.
-%eigen vector if chosen as B will give a uncontrollable system.
-
+%This code plots the  
 clear 
 clc
 close all
