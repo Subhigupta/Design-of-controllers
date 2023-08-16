@@ -1,6 +1,14 @@
 clear
 clc
 %close all
+%The system taken has 2 states position and velocity and one control input
+%i.e. horizontal force applied to a mass.
+%The code uses lqr MATLAB command to find K (full state feedback control
+%gain maatrix) and then with the help of the simulink model demonstrates
+%the impact of FSFB design on the system.
+%LQR is better than FSFB because you can tune Q and R matrices (easy to do so) to avoid the
+%control saturation and inability to measure states issues.
+%% Demonstrate LQR control design
 
 %Define system
 m = 1;
