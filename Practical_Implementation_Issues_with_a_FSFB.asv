@@ -45,7 +45,7 @@ rank(pc);
 desired_closed_loop_poles=[-2;open_loop_poles(2);open_loop_poles(3)];%case 3: only move poles that are associated with states that are really measurable
 
 %Compute full state feedback gain
-K=place(A,B(:,1),desired_closed_loop_poles); % k2 and k3 values come very small so we can neglect them.
+K=place(A,B(:,1),desired_closed_loop_poles); % k2 and k3 values  come very small.
 
 %% Simulate the system
 
