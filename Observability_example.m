@@ -35,7 +35,7 @@ det(obsv(A,C)) %System is observable.
 C=[0 0 1 0]; %Just measures the angular position of the pendulum. 
 
 %Now we will check whether with theta measurement are we able to estimate other
-%states or not.
+%states or not. (We will not be able to estimate the scalar position state).
 obsv(A,C) %Observability matrix [C;CA;CA^2;CA^3]
 det(obsv(A,C)) %System is not observable.
 
@@ -44,7 +44,7 @@ det(obsv(A,C)) %System is not observable.
 C=[1 0 1 0];
 
 %Now we will check whether with two measurements are we able to estimate other
-%states or not.
+%states or not. (We will not be able to estimate the scalar position state).
 obsv(A,C) %Observability matrix [C;CA;CA^2;CA^3]
 det(obsv(A,C)) %System is observable.
 
@@ -53,7 +53,7 @@ det(obsv(A,C)) %System is observable.
 C=[1 0 0 1];
 
 %Now we will check whether with two measurements are we able to estimate other
-%states or not.
+%states or not. (We will not be able to estimate the scalar position state).
 obsv(A,C) %Observability matrix [C;CA;CA^2;CA^3]
 det(obsv(A,C)) %System is observable.
 
