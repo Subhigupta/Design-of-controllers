@@ -13,4 +13,4 @@ The codes in this repository demonstrate controllability, observability and PBH 
 7. Observability_example.m and Observability_gramian_example.m
    * The codes file demonstrates whether a particular (A,C) pair is observable or not and also uses observability gramian to comment on by measuring which state other states will be easy to observe.
 8. Kalman_Filter_Design.m and Kalman_Filter_with_LQR.slx
-   * The code file demonstrates how using the Kalman filter the states can be estimated using the measurements available. The Kalman Filter does a good job of estimating the states even when there is noise and disturbances. The SIMULINK file combines LQR to see whether the states trajectory is obtained using LQR based FULL state feedback design.
+   * The code file demonstrates the use of the Kalman filter for estimating states using the measurements available. The Kalman Filter does a good job of estimating the states even when there is noise and disturbances. The SIMULINK file combines LQR to observe the estimated state trajectory obtained using an LQR-based Full state feedback design.
