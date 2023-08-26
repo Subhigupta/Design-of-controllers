@@ -39,7 +39,7 @@ BF=[B Vd 0*B]; % augments inputs with disturbances and noise.So In total now the
 DF=[zeros(size(C,1),size(B,1)) 0 Vn]; % augments inputs with disturbances and noise.
 
 sysC=ss(A,BF,C,DF); %build state space system when one measurement is done.
-sysFullOutput=ss(A,BF,eye(4),zeros(4,size(BF,2))); %system with full state outpt, disturbance is there through BF but zero noise through DF.
+sysFullOutput=ss(A,BF,eye(4),zeros(4,size(BF,2))); %system with full state output, disturbance is there through BF but zero noise through DF.
 
 %% Build Kalman Filter
 [Kf,P,E]=lqe(A,Vd,C,Vd,Vn); %Calculating kalman filter gain.
@@ -76,5 +76,9 @@ plot(t,x_hat(:,1),'k-','LineWidth',2)
 figure(2)
 plot(t,xtrue,'-',t,x_hat,'--','LineWidth',2) %Plotting true states and estimated states together.
 
-
+Q = diag([1 1 1 1]);
+R = 1000;
+[K, S, E] = lqr(A, B, Q, R);
+x0=[0;-2;-pi/2;2];
+x_hat0=[0;0;0;0];
 
