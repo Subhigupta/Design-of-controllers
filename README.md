@@ -1,7 +1,7 @@
 # Design-of-controllers
-The codes in this repository demonstrate controllability and PBH test, Full State Feedback (FSFB) controller design, implementation issues associated with FSFB, LQR controller design using MATLAB and SIMULINK.
-1. Controllability_of_a_Linear_System and controllability_test_simulation
-   * The code file and Simulink model demonstrates whether a particular (A, B) pair constitute a controllable system or not.
+The codes in this repository demonstrate controllability, observability and PBH test, Full State Feedback (FSFB) controller design, implementation issues associated with FSFB, LQR controller design and Kalman Filter design using MATLAB and SIMULINK. The purpose of each code is described below:
+1. Controllability_of_a_Linear_System and Controllability_test_simulation
+   * The code file and Simulink model demonstrates whether a particular (A, B) pair constitutes a controllable system or not.
 3. PBH_Test
    * The code file shows the criteria needed to be satisfied to choose B so that a particular (A, B) pair constitute a controllable system.
 4. Full_State_Feedback_Control_Design
